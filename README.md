@@ -4,7 +4,7 @@ Using machine learning to combine users music taste
 # DISCLAIMER
 Although meant for a web application, this app isn't quite ready to be published to the public yet. Check back later in the week to see if it has been published and where it can be found.
 
-It is possible to download this project and run it locally by running "python manage.py runserver", it will require the install of spotipy and sklearn
+It is possible to download this project and run it locally by running "python manage.py runserver", it will require the install of spotipy and sklearn, but you will need your own spotify api client id and client secret set in your environment variables
 
 
 # Application
