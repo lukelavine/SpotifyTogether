@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+	text-align:center;
+}
+
+button {
+	background-color: #04AA6D;
+	color:  white;
+	padding: 14px 20px;
+	margin 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+}
+
+button:hover {
+	opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Analyze Music</h1>
+<br>
+Which playlists do you want to include in analysis?
+<br>
+<form action="." id="playlists" method="POST">
+	{% csrf_token %}
+	<input type="checkbox" id="savedmusic" name="savedmusic" value="savedmusic">
+	<label for="savedmusic"> My saved music </label><br>
+	{% for playlist in playlists %}
+	<input type="checkbox" id="{{ playlist.id }}" name="{{ playlist.id }}" value="{{ playlist.id }}">
+	<label for="{{ playlist.id }}"> {{ playlist.name }} </label><br>
+	{% endfor %}
+</form>
+<button type="submit" form="playlists" value="playlists">Analyze</button>
+<br>
+</body>
+</html>

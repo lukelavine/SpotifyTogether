@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+	text-align:center;
+}
+
+.button {
+	background-color: #04AA6D;
+	color:  white;
+	padding: 14px 20px;
+	margin 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+}
+
+button:hover {
+	opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Music Analysis Complete</h1>
+<br>
+<br>
+Want to try combining now?
+<br>
+<br>
+<br>
+<a href="{% url 'combine' %}" class="button"> Combine </a>
+</body>
+</html>

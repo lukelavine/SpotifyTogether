@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+	text-align:center;
+}
+
+.button {
+	background-color: #04AA6D;
+	color:  white;
+	padding: 14px 20px;
+	margin 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+}
+
+button:hover {
+	opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Combine Tastes</h1>
+<br>
+Users
+<br>
+<br>
+<form action="." id="user" method="POST">
+	{% csrf_token %}
+	{% for user in users %}
+		<input type="submit" name="user" value="{{ user.user_id }}"> {{ user.display_name }} </input><br><br>
+	{% endfor %}
+</form>
+<br>
+<br>
+</body>
+</html>
